@@ -1,10 +1,14 @@
 /* eslint-disable react/jsx-key */
 import { frames } from "./frames";
 import { Button } from "frames.js/next";
- 
+
 export const GET = frames(async () => {
   return {
-    image:"https://picsum.photos/seed/frames.js/1146/600",
+    image: (
+      <div tw="bg-purple-800 text-white w-full h-full justify-center items-center flex">
+        This is rendered as an image
+      </div>
+    ),
     buttons: [
       // With query params
       <Button
