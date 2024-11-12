@@ -5,10 +5,13 @@ import { Button } from "frames.js/next";
 export const GET = frames(async () => {
   return {
     image: (
-      <div tw="bg-purple-800 text-white w-full h-full justify-center items-center flex">
-        This is rendered as an image
+      <div tw="bg-purple-800 text-white w-full h-full justify-center items-center flex text-[48px]">
+        The current time is {new Date().toLocaleString()}
       </div>
     ),
+    imageOptions: {
+      dynamic: true,
+    },
     buttons: [
       // With query params
       <Button
