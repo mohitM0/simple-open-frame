@@ -4,7 +4,7 @@ import { Button } from "frames.js/next";
  
 export const GET = frames(async () => {
   return {
-    image: <div tw="flex">Welcome</div>,
+    image:"https://picsum.photos/seed/frames.js/1146/600",
     buttons: [
       // With query params
       <Button
