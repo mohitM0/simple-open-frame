@@ -11,6 +11,11 @@ export const GET = frames(async () => {
     ),
     imageOptions: {
       dynamic: true,
+      headers: {
+        // make sure this is always equal or great than minimumCacheTTL when using Next.js Image component
+        // @see https://nextjs.org/docs/app/api-reference/components/image#minimumcachettl
+        "Cache-Control": "max-age=1",
+      },
     },
     buttons: [
       // With query params
